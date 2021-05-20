@@ -5,6 +5,7 @@ Augustus is a discord bot written in C using [Libdiscord](https://github.com/mal
 # Features
 
 - Ping command
+- Botinfo command
 
 Planning on adding more commands as the API library grows.
 
@@ -13,7 +14,7 @@ Planning on adding more commands as the API library grows.
 Install [Libdiscord](https://github.com/mall0cd/libdiscord)
 
 # Usage
-- Open main.c in your favorite editor
-- Change the bot token macro
+- Open terminal and cd into bot directory.
+- `export token = "Your Bot Token"`
 - run `make`
 - run `./bot`
