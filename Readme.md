@@ -15,6 +15,6 @@ Install [Libdiscord](https://github.com/mall0cd/libdiscord)
 
 # Usage
 - Open terminal and cd into bot directory.
-- `export token = "Your Bot Token"`
+- `export TOKEN = "Your Bot Token"`
 - run `make`
 - run `./bot`
