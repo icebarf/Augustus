@@ -85,10 +85,11 @@ void msg(bot_t* bot, message_t msg) {
 int main(){
   /* Get bot token */
   char* token;
-  if(getenv("TOKEN") == 0) {
+  if(getenv("TOKEN") != NULL) {
     token = getenv("TOKEN");
   }else {
     puts("Could not load bot TOKEN");
+    return -1;
   }
 
   /* Create a new bot instance*/
