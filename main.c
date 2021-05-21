@@ -39,6 +39,7 @@ void clean_cmd() {
   memset(command, 0, 16);
 }
 
+
 void match_command( bot_t* bot, message_t msg) {
   /* Get command and store in local variable and then flush global variable */
   get_cmd(msg);
@@ -55,6 +56,7 @@ void match_command( bot_t* bot, message_t msg) {
     }
   }
 
+  /* execute command based on index */
   switch(cmd_index){
     case 0: cmd_ping(bot, msg); break;
 
@@ -81,8 +83,15 @@ void msg(bot_t* bot, message_t msg) {
 }
 
 int main(){
+  /* Get bot token */
+  char* token;
+  if(getenv("TOKEN") == 0) {
+    token = getenv("TOKEN");
+  }else {
+    puts("Could not load bot TOKEN");
+  }
+
   /* Create a new bot instance*/
-  char* token = getenv("token");
   bot_t* bot = make_bot(token, GUILD_MESSAGES);
 
   bot->on_msg = msg;
